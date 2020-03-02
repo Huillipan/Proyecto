@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/Inicio.css"></link>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark  " >
+        <a class="navbar-brand" href="Principal.html">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="btn btn-outline-light" href="Productos.html">Producto </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-light" href="Empleados.html">Empleado</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-light" href="Clientes.html">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-light" href="Ventas.html" >Nueva Venta</a>
+            </li>
+          </ul>
+            <div class="dropdown " id="salida" >
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              Usuario
+            </button>
+            <div class="dropdown-menu text-center " aria-labelledby="dropdownMenuButton">
+              
+              <img src="https://thumbs.dreamstime.com/b/icono-del-usuario-46707697.jpg" width="80" alt="80" >
+              <a class="dropdown-item" href="#">Usuario</a>
+              <a class="dropdown-item" href="#">Email</a>
+              <div
+                  class="dropdown-divider"> 
+                </div>
+                <a  Class="dropdown-item" href="Registro.html"> Salir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="m-4"  id="fondo" style= "height:100% " style="width:100%" >
+          
+       
+                    <div class="card-body">
+                        <!--DATOS DEL PRODUCTO-->
+                        <div class="form-group">
+                            <label>Datos del Cliente</label>
+                        </div>
+                        <div class="form-group d-flex">
+                            <div class="col-sm-6 d-flex">
+                                <input type="text" name="codigoCliente" value="" class="form-control" placeholder="Codigo">
+                                <button type="submit" name="accion" value="BuscarCliente" class="btn btn-info">Buscar</button>
+                            </div>                           
+                            <div class="col-sm-6">
+                                <input type="text" name="nombresCliente" value="" placeholder="Datos Cliente" class="form-control">
+                            </div>                           
+                        </div>
+                        <!--DATOS DEL PRODUCTO-->
+                        <div class="form-group">
+                            <label>Datos Producto</label>
+                        </div>
+                        <div class="form-group d-flex">
+                            <div class="col-sm-6 d-flex">
+                                <input type="text" name="codigoProducto" value="" class="form-control" placeholder="Codigo">
+                                <button type="submit" name="accion" value="BuscarProducto" class="btn btn-info">Buscar</button>
+                            </div>                           
+                            <div class="col-sm-6">
+                                <input type="text" name="nomProducto" value="" placeholder="Datos Producto" class="form-control">
+                            </div>  
+                        </div>
+                        <div class="form-group d-flex">
+                            <div class="col-sm-6 d-flex">
+                                <input type="text" name="Precio" value="" class="form-control" placeholder="S/.0.00">                                
+                            </div>                           
+                            <div class="col-sm-3">
+                                <input type="number" value="1" name="cant" placeholder="" class="form-control">
+                            </div>  
+                            <div class="col-sm-3">
+                                <input type="text" name="Stock" value="" placeholder="Stock" class="form-control">
+                            </div>  
+                        </div>
+                        <!--BOTON AGREGAR PRODUCTO AL REGISTRO-->
+                        <div class="form-group">
+                            <div class="col-sm">
+                                <button type="submit" name="accion" value="Agregar" class="btn btn-info">Agregar Producto</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <label class="text-right mt-2 col-sm-6">NRO. SERIE</label>
+                    <input readonly="" type="text" name="numeroserie" class="form-control text-center" value="" style="font-weight: bold;font-size: 18px">
+                </div>                      
+                <br>
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="text-center">
+                            <th>N°</th>
+                            <th>ID</th>
+                            <th>PRODUCTO</th>
+                            <th>PRECIO</th>
+                            <th>CANTIDAD</th>
+                            <th>SUBTOTAL</th>                                    
+                            <th class="accion">ACCION</th>                                    
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="list" items="${lista}">
+                            <tr class="text-center">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="d-flex">
+                                    <a href="#" class="btn btn-warning">Editar</a>
+                                    <a href="#" class="btn btn-danger" style="margin-left: 5px">Delete</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer" >
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="" onclick="print()" class="btn btn-success">Generar Venta</a>
+                        <input type="submit" name="accion" value="Cancelar" class="btn btn-danger">
+                    </div>
+                    <div class="col-sm-6 ml-auto d-flex">                                
+                        <label class=" col-sm-6 text-right mt-2">Total a Pagar</label>                                                       
+                        <input type="text" name="txtTotal" value="" class="form-control text-center font-weight-bold" style="font-size: 18px;">
+                 
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+nav{
+background-color: maroon;
+
+}
+
+div#fondo{
+    background-color: darkgray;
+    
+}
+
+div#salida{
+    float: right;
+    margin-left: 60%;
+}
